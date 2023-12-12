@@ -237,8 +237,7 @@ const EditInvoice = () => {
                                 <input v-model="Invoicee.Billfrom.City" type="text">
                             </div>
                             <div> <label>Zip Code </label>
-                                <input v-model="Invoicee.Billfrom.Zip" name="numbersonly" type="text"
-                                    oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                <input v-model="Invoicee.Billfrom.Zip" type="number" />
                             </div>
                             <div> <label>Country </label>
                                 <input v-model="Invoicee.Billfrom.Country" type="text">
@@ -258,7 +257,7 @@ const EditInvoice = () => {
                                 <input v-model="Invoicee.Billto.City" type="text">
                             </div>
                             <div> <label>Zip Code </label>
-                                <input v-model="Invoicee.Billto.Zip" type="number">
+                                <input v-model="Invoicee.Billto.Zip" type="number" name="numbersonly">
                             </div>
                             <div> <label>Country </label>
                                 <input v-model="Invoicee.Billto.Country" type="text">
@@ -292,13 +291,11 @@ const EditInvoice = () => {
                                 <div class="qte-price-total-trash">
                                     <div class="Qtee">
                                         <h3>Qte</h3>
-                                        <input v-model="item.Qte" name="numbersonly" type="text"
-                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                        <input v-model="item.Qte" type="number" />
                                     </div>
                                     <div class="pricee">
                                         <h3>Price</h3>
-                                        <input v-model="item.Price" name="numbersonly" type="text"
-                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                                        <input v-model="item.Price" type="number" />
                                     </div>
                                     <div class="total">
                                         <h3>Total</h3>
